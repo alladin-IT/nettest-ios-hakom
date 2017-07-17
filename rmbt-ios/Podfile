@@ -1,0 +1,53 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+abstract_target 'All' do
+
+  pod 'RMBTClient', :path => '../rmbt-ios-client'
+
+  pod 'TUSafariActivity', '~> 1.0.4'
+  pod 'GoogleMaps', '~> 2.3.0'
+  pod 'BCGenieEffect', '~> 1.1'
+  pod 'KINWebBrowser', '~> 1.3.2'
+  #  pod 'KLCPopup', '~> 1.0' # PopupKit?
+  
+  pod 'PopupDialog', '~> 0.5.4'
+
+  # use ActionKit pod again after they have merged the swift 3 support
+  pod 'ActionKit', '~> 2.0' # :git => 'https://github.com/ActionKit/ActionKit.git' #
+  #pod 'ActionKit', :git => 'https://github.com/frenkelor/ActionKit'
+
+  # lib for autolayout contraints
+  #pod 'SnapKit', '~> 3.1.2'
+
+  #pod 'SWRevealViewController', '~> 2.3.0' # TODO: not possible to use the version from cocoapods because tb changed something in the implementation...
+  #pod 'MMDrawerController', '~> 0.5.7'
+
+  #pod 'XCGLogger', '~> 4.0.0'
+  #pod 'BrightFutures', '~> 1.0.0'
+
+  # For graphs
+  #pod 'Charts', '~> 3.0.1'
+
+  pod 'SwiftGen', '~> 4.2.1'
+  pod 'SwiftLint', '~> 0.19.0'
+
+  target 'RMBT_HAKOM' do
+      #target 'UnitTests' do
+      #    inherit! :search_paths
+      #end
+
+      #target 'UITests' do
+      #  inherit! :search_paths
+      #end
+  end
+
+  target 'RMBT_alladin' do
+    
+  end
+end
+
